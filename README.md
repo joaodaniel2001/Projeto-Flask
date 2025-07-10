@@ -57,7 +57,5 @@ if __name__ = '__main__':
 </code></pre>
 
 <ul><li>Inicie o código, e no <b>terminal</b>, copie o código <b>http</b> e cole no navegador, que seu código flask funcionará:</li></ul>
-<pre><code>
-<ul><li>Running on http://127.0.0.1:5000</li></ul>
-</pre></code>
+<pre><code><ul><li>Running on http://127.0.0.1:5000</li></ul></pre></code>
 
