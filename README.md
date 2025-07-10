@@ -8,6 +8,7 @@
 - [Comandos](#comandos)
 - [Estrutura básica](#estrutura-básica)
 - [Segurança .env](#segurança-env)
+- [Bibliotecas de segurança](#bibliotecas-de-segurança)
 
 <br>
 
@@ -140,7 +141,7 @@ DATABASE_URI = 'sqlite:///database.db'
 SECRET_KEY = 'a50ee2b080c8ca02dd7d4ca3c1316d614dbf04578a7a5d19' # <-- Aqui
 ```
 
-## Bibliotecas de segurança
+## Bibliotecas de segurança                                                                                                                                         
 
 - **Flask login:** 
 
