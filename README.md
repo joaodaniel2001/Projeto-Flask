@@ -19,7 +19,7 @@
 
 ## Biblioteca Flask
 
-<ul><li>Instalando a Biblioteca Flask:</li></ul>
+<ul><li>Flask:</li></ul>
 <pre><code>pip install flask</code></pre>
 
 <ul><li>Flask SQLAlchemy & Flask Migrate:</li></ul>
