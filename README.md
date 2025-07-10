@@ -1,61 +1,156 @@
 # Projeto FLASK
 
-## Pasta **.venv**
 
-<p> 1. Instalação da pasta <b>.venv</b></p>
+## Sumário
 
-<pre><code>python -m venv .venv</code></pre>
+- [Pasta .venv](#pasta-.venv)
+- [Bibliotecas Flask](#bibliotecas-flask)
+- [Comandos](#comandos)
+- [Estrutura básica](#estrutura-básica)
+- [Segurança .env](#segurança-env)
+
 <br>
 
-<p> 2. Ativação no terminal</p>
+## Pasta **.venv**
 
-<ul>
-    <li>Abra o <b>Command Prompt</b></li>
-    <li>Reabra o Terminal</li>
-    <li>Digite o comando:</li>
-</ul>
+<p>1. Instalação da pasta <b>.venv</b></p>
 
-<pre><code>.venv\Scripts\activate</code></pre><br>
+```bash
+python -m venv .venv
+```
 
-## Biblioteca Flask
+<br>
 
-<ul><li>Flask:</li></ul>
-<pre><code>pip install flask</code></pre>
+<p>2. Ativação no terminal</p>
 
-<ul><li>Flask SQLAlchemy & Flask Migrate:</li></ul>
-<pre><code>pip install Flask-SQLAlchemy Flask-Migrate</code></pre>
+- Abra o **Command Prompt**
+- Reabra o Terminal
 
-<ul><li>Flask-WTF:</li></ul>
-<pre><code>pip install Flask-WTF</code></pre><br>
+```bash
+.venv\Scripts\activate
+```
+
+<br>
+
+## Bibliotecas Flask
+
+- **Flask:** micro framework web para Python.
+```bash
+pip install flask
+```
+
+- **Flask SQLAlchemy:** permite a manipulação de bancos de dados com um ORM.
+```bash
+pip install Flask-SQLAlchemy
+```
+
+- **Flask Migrate:** utiliza Alembic para gerenciar migrações do banco de dados.
+
+```bash
+pip install Flask-Migrate
+```
+
+- **Flask-WTF:** integra o WTForms ao Flask, facilitando a criação de formulários HTML.
+
+```bash 
+pip install Flask-WTF
+```
+
+<br>
+
+
+<br>
 
 ## Comandos
 
-<ul><li>Inicializar a pasta de <b>migrações</b>:</li></ul>
-<pre><code>flask db init</code></pre><br>
+- Inicializar a pasta de **migrações**:
 
-<ul><li>Cria uma migração com uma nova <b>mensagem</b>:</li></ul>
-<pre><code>flask db migrate -m "mensagem"</code></pre><br>
+```bash
+flask db init
+```
 
-<ul><li>Aplica as migrações ao <b>banco de dados</b>:</li></ul>
-<pre><code>flask db upgrade</code></pre><br>
+<br>
+
+- Cria uma migração com uma nova **mensagem**:
+```bash
+flask db migrate -m "mensagem"
+```
+
+<br>
+
+- Aplica as migrações ao **banco de dados**:
+
+```bash
+flask db upgrade
+```
+
+<br>
 
 ## Estrutura básica
 
-<ul><li>Crie uma arquivo <b>main.py</b> e escreva:</li></ul>
+- Crie uma arquivo **main.py** e escreva:
 
-<pre><code>
-from flask import flask
+```bash
+from flask import Flask
 
-app = flask (__name__)
+app = Flask (__name__)
 @app.route ('/')
 def homepage ():
     return 'Minha primeira página Flask'
 
-if __name__ = '__main__':
-    app.run (debug=true)
+if __name__ == '__main__':
+    app.run (debug=True)
 
-</code></pre>
+```
 
-<ul><li>Inicie o código, e no <b>terminal</b>, copie o código <b>http</b> e cole no navegador que seu código flask funcionará:</li></ul>
-<pre><code><ul><li>Running on http://127.0.0.1:5000</li></ul></pre></code>
+- Inicie o código, e no **terminal**, copie o código **http** e cole no navegador que seu código flask funcionará:
+```bash
+- Running on http://127.0.0.1:5000
+```
+
+## Segurança **.env**
+
+- **Instalação do arquivo .env:** no terminal escreva o comando abaixo.
+
+```bash
+pip install python-dotenv
+```
+
+- Após isso, fora da pasta app, crie um arquivo chamado **.env**. Neste arquivo, escreva o seguinte:
+
+```bash
+DATABASE_URI = 'sqlite:///database.db'
+SECRET_KEY = 'senha'
+```
+
+- Depois de baixar as bibliotecas de segurança **(login & bcrypt)**, crie um arquivo chamado ***create_secret.py***, e dentro dele escreva:
+
+```bash
+import secrets
+
+sk = secrets.token_hex(24) # quantidade de caracteres
+
+print (sk)
+```
+
+- Inicialize o arquivo e copie o conteúdo do terminal, após isso, vá até o arquivo  ***.env*** e cole a senha no **SECRET_KEY**:
+
+```bash
+DATABASE_URI = 'sqlite:///database.db'
+SECRET_KEY = 'a50ee2b080c8ca02dd7d4ca3c1316d614dbf04578a7a5d19' # <-- Aqui
+```
+
+## Bibliotecas de segurança
+
+- **Flask login:** 
+
+```bash
+pip install flask-login
+```
+
+- **Flask bcrypt:** 
+
+```bash
+pip install flask-bcrypt
+```
 
