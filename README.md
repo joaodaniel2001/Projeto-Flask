@@ -12,6 +12,10 @@
 
 <br>
 
+### **OBS:** Antes de começar o projeto **JAMAIS** esqueça que o local para dar Run e Debug é **APENAS** o ***main.py***
+
+<br>
+
 ## Pasta **.venv**
 
 <p>1. Instalação da pasta <b>.venv</b></p>

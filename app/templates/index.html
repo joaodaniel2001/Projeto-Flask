@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="container">
+        <div class="row">
+            <h3>Projeto Flask</h3>
+            <h5>@senaisc</h5>
+        </div>
+        <div>
+            <p>Bem vindos {{context.usuario}}, a aula de Flask!</p>
+            <p><b>Idade:</b> {{context.idade}}</p>
+
+            <a href="{{url_for('novapagina')}}" class="btn btn-outline-dark px-5"> Link para a nova página </a>
+        
+        </div>
+    </div>
+
+{% endblock %}
