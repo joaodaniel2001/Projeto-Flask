@@ -159,3 +159,9 @@ pip install flask-login
 pip install flask-bcrypt
 ```
 
+- **Email validator:** 
+
+```bash
+pip install email-validator
+```
+
